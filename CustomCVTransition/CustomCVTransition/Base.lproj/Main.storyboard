@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="CustomCVTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHB-hg-0Pd">
+                                <rect key="frame" x="62" y="413" width="290" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="这是一个按钮"/>
+                                <connections>
+                                    <action selector="showDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFa-J8-RoX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EHB-hg-0Pd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8z8-Qf-b1C"/>
+                            <constraint firstItem="EHB-hg-0Pd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NdR-mJ-7RS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="4Mq-Wk-pSf">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="vqC-1Y-nfJ" customClass="DetailViewController" customModule="CustomCVTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sK0-4Y-vzR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone11" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-69-krH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6OE-69-krH" firstAttribute="trailing" secondItem="iA5-3K-Tv4" secondAttribute="trailing" id="NQS-0v-Qwn"/>
+                            <constraint firstItem="6OE-69-krH" firstAttribute="bottom" secondItem="iA5-3K-Tv4" secondAttribute="bottom" id="RGo-8t-T2O"/>
+                            <constraint firstItem="6OE-69-krH" firstAttribute="leading" secondItem="iA5-3K-Tv4" secondAttribute="leading" id="SoJ-xp-met"/>
+                            <constraint firstItem="6OE-69-krH" firstAttribute="top" secondItem="iA5-3K-Tv4" secondAttribute="top" id="wTU-om-bGG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iA5-3K-Tv4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opD-w0-1Fg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969.56521739130437" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iPhone11" width="594" height="712"/>
+    </resources>
+</document>
