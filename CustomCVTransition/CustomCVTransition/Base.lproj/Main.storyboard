@@ -23,14 +23,25 @@
                                     <action selector="showDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFa-J8-RoX"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hatsune3dai" translatesAutoresizingMaskIntoConstraints="NO" id="ze5-6j-deK">
+                                <rect key="frame" x="0.0" y="563" width="414" height="333"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EHB-hg-0Pd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8z8-Qf-b1C"/>
                             <constraint firstItem="EHB-hg-0Pd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NdR-mJ-7RS"/>
+                            <constraint firstAttribute="bottom" secondItem="ze5-6j-deK" secondAttribute="bottom" id="ZYg-QG-RVw"/>
+                            <constraint firstItem="ze5-6j-deK" firstAttribute="top" secondItem="EHB-hg-0Pd" secondAttribute="bottom" constant="80" id="all-Ue-SeM"/>
+                            <constraint firstItem="ze5-6j-deK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l1W-Jh-EPu"/>
+                            <constraint firstItem="ze5-6j-deK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="syo-hT-acN"/>
+                            <constraint firstAttribute="trailing" secondItem="ze5-6j-deK" secondAttribute="trailing" id="vkS-OC-mNp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ze5-6j-deK" id="t9y-SJ-3GK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone11" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-69-krH">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone11" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-69-krH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
@@ -57,6 +68,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iA5-3K-Tv4"/>
                     </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="6OE-69-krH" id="7ie-4T-Mqo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opD-w0-1Fg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,6 +78,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hatsune3dai" width="1408" height="792"/>
         <image name="iPhone11" width="594" height="712"/>
     </resources>
 </document>

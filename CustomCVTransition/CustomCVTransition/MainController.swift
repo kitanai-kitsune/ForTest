@@ -13,6 +13,8 @@ class MainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(tap:))))
     }
 
     @IBAction func showDetail(_ sender: Any) {
@@ -22,6 +24,18 @@ class MainController: UIViewController {
         present(detailVC, animated: true, completion: nil)
         
     }
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @objc private func handleTap(tap: UITapGestureRecognizer){
+        
+        let detailVC = storyboard!.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        detailVC.modalPresentationStyle = .fullScreen
+        present(detailVC, animated: true, completion: nil)
+        
+    }
+    
+    
     
 }
 

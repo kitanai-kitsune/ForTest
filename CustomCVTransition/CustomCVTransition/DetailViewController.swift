@@ -10,10 +10,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var detailImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        detailImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap2(tap:))))
+        
+        }
+    
+    @objc func handleTap2(tap: UITapGestureRecognizer){
+    dismiss(animated: true, completion: nil)
+        
     }
     
 
